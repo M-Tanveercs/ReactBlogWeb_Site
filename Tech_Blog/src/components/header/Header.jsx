@@ -54,7 +54,7 @@ item.active? (
       {item.name}
     </button>
   </li>
-):(none)
+):null
 )}
 
 {

@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { Button, Input, Select, RTE } from "../index";
 import appwriteService from "../../appwrite/config";
 import { useNavigate } from "react-router-dom";
-import { UseSelector } from "react-redux";
+import { useSelector } from "react-redux";
 const PostForm = ({ post }) => {
   const { register, handleSubmit, watch, setValue, control, getValues } =
     useForm({
@@ -15,7 +15,7 @@ const PostForm = ({ post }) => {
       },
     });
   const navigate = useNavigate();
-  const userData = UseSelector((state) => state.user.userData);
+  const userData = useSelector((state) => state.user.userData);
   const submit = async (data) => {
     if (post) {
       const file = data.image[0]
