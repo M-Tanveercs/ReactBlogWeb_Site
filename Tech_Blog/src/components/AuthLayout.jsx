@@ -26,7 +26,7 @@ if(authentication && authStatus!=authentication){
 setLoader(false)
 }, [authStatus,navigate,authentication])
 
-return loader ? <div>Loading...</div> : {children}
+return loader ? <h1>Loading...</h1> : <>{children}</>
 
 }
 
