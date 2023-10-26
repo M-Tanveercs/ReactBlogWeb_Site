@@ -15,7 +15,7 @@ this.account=new Account(this.client)
 }
 async createAccount({email,password,name}){
     try {
-       const userAccount= await this.account.create(ID.unique(),  email,password,name);
+       const userAccount= await this.account.create(ID.unique(),email,password,name);
     if(userAccount){
     return this.login({email,password})
     }else{
@@ -46,7 +46,7 @@ return null;
 }
 async logout(){ 
     try {
-        return await this.account.deleteSessions();
+        return await this.account.deleteSession();
     } catch (error) {
        console.log("Appwrite service :: logout :: error",error)
     }

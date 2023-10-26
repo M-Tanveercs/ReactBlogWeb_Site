@@ -26,7 +26,7 @@ const Login = () => {
   };
   return (
     <div
-      className={`mx-auto w-full max-w-lg bg-gray-1900 rounded [-190 border border-black/10`}
+      className={`mx-auto w-full max-w-lg bg-gray-100 rounded p-10 border border-black/10`}
     >
       <div className="mb-2 flex justify-center">
         <span className="inline-black w-full mac-w-[100px]">

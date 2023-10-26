@@ -44,7 +44,7 @@ children:[
     {
       path:"/all-posts",
       element:(
-        <AuthLayout authentication={true}>
+        <AuthLayout authentication>
           {" "}
           <AllPosts/>
         </AuthLayout>
@@ -53,7 +53,7 @@ children:[
     {
       path:'/add-post',
       element:(
-        <AuthLayout authentication={true}
+        <AuthLayout authentication
         >
           {" "}
           <AddPost/>
@@ -63,7 +63,7 @@ children:[
     {
       path:'/edit-post/:slug',
       element:(
-        <AuthLayout authentication={true}>
+        <AuthLayout authentication>
           {" "}
 
           <EditPost/>
