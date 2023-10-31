@@ -37,9 +37,9 @@ const Header = () => {
   },
   ]
   return (
-   <header className='py-3 sha bg-gray-500'>
+   <header className='py-3 sha bg-violet-700'>
     <Container>
-      <nav className='flex'>
+      <nav className='flex text-cyan-50'>
 <div className='mr-4'>
   <Link to='/'>
   <Logo width='70px'/>
