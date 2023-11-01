@@ -15,7 +15,7 @@ const Home = () => {
   if (posts.length === 0) {
     return (
       <div className="w-full py-8 mt-4 text-center ">
-        {/* <Container>
+        <Container>
           <div className="flex flex-wrap">
             <div className="p-2 w-full">
               <h1 className="text-2xl font-bold hover:text-grap-500">
@@ -24,8 +24,14 @@ const Home = () => {
               </h1>
             </div>
           </div>
-        </Container> */}
-        <section className="bg-white dark:bg-gray-900">
+        </Container>
+       </div>
+    );
+  }
+  return (
+
+<>
+     <section className="bg-white dark:bg-gray-900">
           <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
           
           
@@ -179,12 +185,9 @@ const Home = () => {
             </div>
           </div>
         </section>
-      </div>
-    );
-  }
-  return (
+      
     <div className="w-full py-8  ">
-        <Container>
+        
           <div className="flex flex-wrap">
             {posts.map((post) => (
               <div className="p-2 w-full" key={post.$id}>
@@ -192,8 +195,10 @@ const Home = () => {
               </div>
             ))}
             </div>
-          </Container>
+         
+
     </div>
+    </>
     )
 };
 

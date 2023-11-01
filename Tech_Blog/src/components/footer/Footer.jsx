@@ -13,7 +13,7 @@ const Footer = () => {
               </div>
               <div>
                 <p className="text-sm text-white">
-                  &copy; Copyright 2023. All Rights Reserved by DevUI.
+                  &copy; Copyright 2023. All Rights Reserved by Tech Blog.
                 </p>
               </div>
             </div>
