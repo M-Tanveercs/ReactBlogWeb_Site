@@ -1,11 +1,11 @@
-import { RouterProvider } from 'react-router-dom'
+
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 import { Provider } from 'react-redux'
 import store from './store/store.js'
-import { Route, createBrowserRouter } from 'react-router-dom'
+import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import { AuthLayout, Login } from './components/index.js'
 import Home from './pages/Home.jsx'
 import AddPost from './pages/AddPost.jsx'
@@ -24,7 +24,7 @@ const router = createBrowserRouter([
 children:[
   {
     path:'/',
-    element:<Home/>
+    element:<Home/>,
   },
   {
     path:'/login',
