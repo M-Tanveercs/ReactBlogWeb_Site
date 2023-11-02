@@ -77,17 +77,33 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import appwriteService from "../appwrite/config";
 import { Button, Container } from "../components";
 import parse from "html-react-parser";
-import { useSelector } from "react-redux";
 
+import authService from "../appwrite/auth";
 export default function Post() {
   const [post, setPost] = useState(null);
   const { slug } = useParams();
   const navigate = useNavigate();
-
-  const userData = useSelector((state) => state.auth.userData);
-
-  const isAuthor = post && userData ? post.userId === userData.$id : false;
- 
+const [Author, setAtuthor] = useState()
+  // const userData = useSelector((state) => state.auth.userData);
+  let isAuthor
+  let userData
+useEffect(() => {
+   authService.getCurrentUser()
+    .then((userData) => {
+      if (userData){
+ isAuthor= post && userData ? post.userId === userData.$id : false;
+ setAtuthor(isAuthor)
+ console.log("view post",post)
+ console.log("view userdata",userData)
+ console.log(" post.userId", post.userId);
+ console.log("userData.$id", userData.$id);
+ console.log("view is author in post",isAuthor);
+}}) 
+}, [userData,post])
+console.log(Author)
+  
+//  console.log(userData);
+//   console.log(post);
   useEffect(() => {
     if (slug) {
       appwriteService.getPost(slug).then((post) => {
@@ -117,7 +133,7 @@ export default function Post() {
          
           />
 
-          {isAuthor && (
+          {Author && (
             <div className="absolute right-6 bottom-5">
               <Link to={`/edit-post/${post.$id}`}>
                 <Button bgColor="bg-green-500" className="mr-3">

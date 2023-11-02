@@ -59,15 +59,20 @@ function App() {
   useEffect(() => {
     authService.getCurrentUser()
     .then((userData) => {
-      if (userData) {
-        dispatch(login({userData}))
-      } else {
-        dispatch(logout())
-      }
+      // if (userData) {
+      //   console.log(userData)
+      //   dispatch(login({userData}))
+      // } else {
+      //   dispatch(logout())
+      // }
+       if (!userData) {
+         dispatch(logout());
+       }
     })
     .finally(() => setLoading(false))
   }, [])
-  
+ 
+
   return !loading ? (
     <div className="min-h-screen flex flex-wrap content-between bg-slate-300">
       <div className="w-full block">
