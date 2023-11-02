@@ -1,9 +1,11 @@
 import React from 'react'
-
-const Logo = ({width='100px'}) => {
+import logo from "./output-onlinepngtools.png";
+const Logo = ({width='70px'}) => {
   return (
-    <div>Tech Blog</div>
-  )
+    <div  className='w-20'>
+   <img src={logo} alt="" />
+    </div>
+  );
 }
 
 export default Logo

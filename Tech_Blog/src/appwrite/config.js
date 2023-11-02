@@ -131,7 +131,9 @@ export class Service {
           status,
           userId,
         }
+      
       );
+   
     } catch (error) {
       console.log("Appwrite serive :: createPost :: error", error);
     }
@@ -223,6 +225,7 @@ export class Service {
   getFilePreview(fileId) {
     return this.bucket.getFilePreview(conf.appwriteBucketId, fileId);
   }
+  debugger;
 }
 
 const service = new Service();

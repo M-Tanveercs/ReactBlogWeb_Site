@@ -35,15 +35,15 @@ const Header = () => {
    <header className='py-3 sha bg-violet-700'>
     <Container>
       <nav className='flex text-cyan-50'>
-<div className='mr-4'>
+<div className='mr-4 '>
   <Link to='/'>
-  <Logo width='70px'/>
+  <Logo  classNam='w-10'/>
   </Link>
 </div>
-<ul className='flex ml-auto'>
+<ul className='flex ml-auto mt-2'>
 {navItems.map((item)=>
 item.active? (
-  <li key={item.name} className='inline-box px-6 py-2 duration-200 hover:bg-slate-400 rounded-full'>
+  <li key={item.name} className='inline-box px-6 py-2 duration-200 hover:bg-slate-400  hover:text-violet-600 rounded-full'>
     <button onClick={()=>navigate(item.slug)}>
 
       {item.name}
@@ -68,3 +68,6 @@ item.active? (
 }
 
 export default Header
+
+
+
