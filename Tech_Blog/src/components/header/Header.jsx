@@ -43,7 +43,7 @@ const Header = () => {
 <ul className='flex ml-auto'>
 {navItems.map((item)=>
 item.active? (
-  <li key={item.name} className='inline-box px-6 py-2 duration-200 hover:bg-slate-400 rounded-full'>
+  <li key={item.name} className='inline-box px-6 py-2 duration-200 hover:bg-slate-400  hover:text-violet-600 rounded-full'>
     <button onClick={()=>navigate(item.slug)}>
 
       {item.name}

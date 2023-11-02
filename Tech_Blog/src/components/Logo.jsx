@@ -2,8 +2,10 @@ import React from 'react'
 
 const Logo = ({width='100px'}) => {
   return (
-    <div>Tech Blog</div>
-  )
+    <div>
+      <b>Tech Blog</b>
+    </div>
+  );
 }
 
 export default Logo
